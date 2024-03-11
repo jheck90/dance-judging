@@ -1,11 +1,13 @@
 # Couldn't automatically generate a config from your source code.
 # This is a generic template to serve as a base for your custom config
 # See: https://circleci.com/docs/configuration-reference
+
+# https://circleci.com/docs/configuration-reference/#resourceclass
 version: 2.1
 jobs:
   test:
-    docker:
-      - image: cimg/base:stable
+    machine: true
+    resource_class: jheck90/dance-judging
     steps:
       - checkout
       # Replace this with a real test runner invocation
@@ -13,8 +15,8 @@ jobs:
           name: Run tests
           command: echo 'replace me with real tests!' && false
   build:
-    docker:
-      - image: cimg/base:stable
+    machine: true
+    resource_class: jheck90/dance-judging
     steps:
       - checkout
       # Replace this with steps to build a package, or executable
@@ -24,8 +26,8 @@ jobs:
       - store_artifacts:
           path: example.txt
   deploy:
-    docker:
-      - image: cimg/base:stable
+    machine: true
+    resource_class: jheck90/dance-judging
     steps:
       # Replace this with steps to deploy to users
       - run:
