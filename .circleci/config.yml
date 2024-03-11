@@ -36,13 +36,13 @@ jobs:
   #     - run:
   #         name: deploy
   #         command: '#e.g. ./deploy.sh'
-# workflows:
-#   example:
-#     jobs:
-#       - test
-#       - build:
-#           requires:
-#             - test
-#       - deploy:
-#           requires:
-#             - test
+workflows:
+  example:
+    jobs:
+      - test
+      # - build:
+      #     requires:
+      #       - test
+      # - deploy:
+      #     requires:
+      #       - test
