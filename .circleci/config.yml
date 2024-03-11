@@ -51,7 +51,7 @@
 version: 2.1
 jobs:
   build:
-    mode: single-task
+    # mode: single-task
     docker:
       - image: cimg/base:current
     resource_class: jheck90/dance-judging
