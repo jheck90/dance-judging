@@ -1,0 +1,21 @@
+# https://circleci.com/docs/configuration-reference/#resourceclass
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: cimg/base:current
+    resource_class: jheck90/dance-judging
+    steps:
+      - run: echo "Hi I'm on a Container Runner!"
+  build:
+    # mode: single-task
+    docker:
+      - image: cimg/base:current
+    resource_class: jheck90/dance-judging
+    steps:
+      - run: echo "Hi I'm on a Container Runner!"
+workflows:
+  build-workflow:
+    jobs:
+      - test
+      - build
