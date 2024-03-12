@@ -9,3 +9,8 @@
 - [ ] Who's dancing now?
 - [ ] infrastructure for whole thing
 - [ ] cost analysis
+
+Access:
+https://yoursite.com/proxy/6969/google-sheets
+
+auth in, grab code, paste into console. this populates your token file
