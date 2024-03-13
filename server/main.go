@@ -33,7 +33,9 @@ func main() {
 		}
 	router := gin.Default()
 
-	router.GET("/google-sheets", handleGoogleSheets)
+	// router.GET("/google-sheets", handleGoogleSheets)
+	router.StaticFS("/", http.Dir("client/build"))
+
 
 	log.Fatal(router.Run(":6969"))
 }
